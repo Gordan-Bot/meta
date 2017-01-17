@@ -1,2 +1,2 @@
 # meta
-meta files
+meta files for Gordan-Bot
