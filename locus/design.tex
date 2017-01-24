@@ -1,0 +1,109 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University Assignment Title Page 
+% LaTeX Template
+% Version 1.0 (27/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% WikiBooks (http://en.wikibooks.org/wiki/LaTeX/Title_Creation)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+% Instructions for using this template:
+% This title page is capable of being compiled as is. This is not useful for 
+% including it in another document. To do this, you have two options: 
+%
+% 1) Copy/paste everything between \begin{document} and \end{document} 
+% starting at \begin{titlepage} and paste this into another LaTeX file where you 
+% want your title page.
+% OR
+% 2) Remove everything outside the \begin{titlepage} and \end{titlepage} and 
+% move this file to the same directory as the LaTeX file you wish to add it to. 
+% Then add \input{./title_page_1.tex} to your LaTeX file where you want your
+% title page.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+% PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+% HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE Locus}\\[1.5cm] % Name of your university/college
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Title}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+% AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+\Large \emph{Author:}\\
+David \textsc{Dong}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+% DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------------------------------
+% LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+%\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
+ 
+%----------------------------------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+\section{Introduction}
+Locus is a mirco service that leverages the Locu API to search for restaurants and menus for the gordan chat bot. It takes in a list of categories and preferences, and returns a list of restaurants or menues for a restaurant. This serves are the data point for the chat bot.
+
+\section{Uses Cases}
+\subsection{Recommend restaurants}
+As an user, I want Locus to recommend me restaurants based on my preferences.
+1. User asks gordan bot for food (I would like to eat chicken)
+2. NLP interpretes chicken and food as keywork
+3. Locus uses these keywords to find at most 5 restaurants for the user
+4. Restaurants are shown to the user as action items
+
+\subsection{Recommend Menu}
+As an user, I want information about dishes for a particular restaurant based on my preferences.
+1. User clicks on a restaurant action item showing interest
+2. Locus uses past keywords to suggest 5 dishes for the user
+3. Dishes are shown as action items for the user
+
+\section{Tools}
+Koa is chosen as the language of choice for its coroutine styled API calls. Locus will likely chain many API calls to to the Locu api to aggregate the data for the user. Koa provides an easy and readable syntax for this task.
+
+\section{API Endpoints}
+GET /restaurants/
+GET
+
+
+\end{document}
